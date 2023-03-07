@@ -9,10 +9,7 @@ export default function decorate(block) {
             "Content-Type": "application/json",
         },
     })
-    .then((response) => {
-        console.log(response)
-        response.json()
-    })
+    .then((response) => response.json())
     .then((data) => {
         console.log(data);
         if(data.data) {
