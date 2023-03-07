@@ -4,6 +4,7 @@ export default function decorate(block) {
 
     const cfPersistedQuery = block.textContent;
     console.log(cfPersistedQuery.trim()+"?ts="+Math.random()*1000);
+    console.log(window.location);
     
     const cfReq = fetch(cfPersistedQuery.trim()+"?ts="+Math.random()*1000)
     .then((response) => response.json())
