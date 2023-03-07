@@ -7,7 +7,8 @@ export default function decorate(block) {
     const cfReq = fetch(cfPersistedQuery, {
         headers: {
             "Content-Type": "application/json"
-        }
+        },
+        mode: "no-cors"
     })
     .then((response) => response.json())
     .then((data) => {
