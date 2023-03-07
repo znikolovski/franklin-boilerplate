@@ -4,11 +4,7 @@ export default function decorate(block) {
 
     const cfPersistedQuery = block.textContent;
     console.log(cfPersistedQuery.trim());
-    const cfReq = fetch(cfPersistedQuery, {
-        headers: {
-            "Content-Type": "application/json",
-        },
-    })
+    const cfReq = fetch(cfPersistedQuery)
     .then((response) => response.json())
     .then((data) => {
         console.log(data);
