@@ -7,7 +7,6 @@ export default function decorate(block) {
     const cfReq = fetch(cfPersistedQuery)
     .then((response) => response.json())
     .then((data) => {
-        console.log(data);
         if(data.data) {
             const cfList = data.data.offerList.items;
             const cfListBlock = document.createElement('ul');
@@ -20,17 +19,19 @@ export default function decorate(block) {
                 }
                 if(cf.heroImage !== null) {
                     imageUrl = cf.heroImage["_publishUrl"];
-                    console.log(imageUrl)
+                    console.log(cf.heroImage)
+                
+                    const cfElem = document.createElement('li', {"class": "adventure-item"});
+                    cfElem.setAttribute("class", "adventure-item");
+                    cfElem.setAttribute("itemscope", "");
+                    cfElem.setAttribute("itemid", "urn:aemconnection:" + cf["_path"] + "/jcr:content/data/master");
+                    cfElem.setAttribute("itemtype", "reference");
+                    cfElem.setAttribute("itemfilter", "cf");
+                    const offer = '<a href="'+ctaUrl+'"><img class="adventure-item-image" src="'+imageUrl+'" alt="'+cf.headline+'" itemprop="primaryImage" itemtype="image"></a><div class="adventure-item-title" itemprop="headline" itemtype="text">'+cf.headline+'</div>';
+                    cfElem.innerHTML = offer;
+                    cfListBlock.appendChild(cfElem);
                 }
-                const cfElem = document.createElement('li', {"class": "adventure-item"});
-                cfElem.setAttribute("class", "adventure-item");
-                cfElem.setAttribute("itemscope", "");
-                cfElem.setAttribute("itemid", "urn:aemconnection:" + cf["_path"] + "/jcr:content/data/master");
-                cfElem.setAttribute("itemtype", "reference");
-                cfElem.setAttribute("itemfilter", "cf");
-                const offer = '<a href="'+ctaUrl+'"><img class="adventure-item-image" src="'+imageUrl+'" alt="'+cf.headline+'" itemprop="primaryImage" itemtype="image"></a><div class="adventure-item-title" itemprop="headline" itemtype="text">'+cf.headline+'</div>';
-                cfElem.innerHTML = offer;
-                cfListBlock.appendChild(cfElem);
+                
             });
             block.textContent = "";
             block.append(cfListBlock);
