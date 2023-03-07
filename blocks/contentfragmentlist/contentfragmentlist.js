@@ -2,7 +2,7 @@ import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 
 export default function decorate(block) {
 
-    const cfPersistedQuery = block.textContent;
+    const cfPersistedQuery = block.textContent+"?ts="+Date.now;
     console.log(cfPersistedQuery.trim());
     const cfReq = fetch(cfPersistedQuery)
     .then((response) => response.json())
