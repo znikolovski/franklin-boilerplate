@@ -3,8 +3,9 @@ import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 export default function decorate(block) {
 
     const cfPersistedQuery = block.textContent;
-    console.log(cfPersistedQuery.trim()+"?ts="+Date.now);
-    const cfReq = fetch(cfPersistedQuery.trim()+"?ts="+Date.now())
+    console.log(cfPersistedQuery.trim()+"?ts="+Math.random()*1000);
+    
+    const cfReq = fetch(cfPersistedQuery.trim()+"?ts="+Math.random()*1000)
     .then((response) => response.json())
     .then((data) => {
         if(data.data) {
