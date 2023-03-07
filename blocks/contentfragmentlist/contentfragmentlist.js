@@ -6,7 +6,7 @@ export default function decorate(block) {
     
     console.log(window.location.ancestorOrigins.length);
     if(window.location.ancestorOrigins.length > 0) {
-        cfPersistedQuery = cfPersistedQuery.replace("publish", "author");
+        cfPersistedQuery.replace("publish", "author");
     }
 
     console.log(cfPersistedQuery.trim()+"?ts="+Math.random()*1000);
