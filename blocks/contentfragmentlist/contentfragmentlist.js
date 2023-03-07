@@ -2,11 +2,11 @@ import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
 
 export default function decorate(block) {
 
-    const cfPersistedQuery = block.textContent;
+    let cfPersistedQuery = block.textContent;
     
     console.log(window.location.ancestorOrigins.length);
     if(window.location.ancestorOrigins.length > 0) {
-        cfPersistedQuery.replace("publish", "author");
+        cfPersistedQuery = cfPersistedQuery.replace("publish", "author");
     }
 
     console.log(cfPersistedQuery.trim()+"?ts="+Math.random()*1000);
