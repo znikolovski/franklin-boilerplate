@@ -10,7 +10,10 @@ export default function decorate(block) {
         },
         mode: "no-cors"
     })
-    .then((response) => response.json())
+    .then((response) => {
+        console.log(response)
+        response.json()
+    })
     .then((data) => {
         console.log(data);
         if(data.data) {
