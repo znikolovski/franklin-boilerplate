@@ -40,7 +40,7 @@ export default function decorate(block) {
                     cfElem.setAttribute("itemid", "urn:aemconnection:" + cf["_path"] + "/jcr:content/data/master");
                     cfElem.setAttribute("itemtype", "reference");
                     cfElem.setAttribute("itemfilter", "cf");
-                    const offer = '<a href="'+ctaUrl+'"><img class="adventure-item-image" src="'+imageUrl+'" alt="'+cf.headline+'" itemprop="primaryImage" itemtype="image"></a><div class="adventure-item-title" itemprop="headline" itemtype="text">'+cf.headline+'</div>';
+                    const offer = '<a href="'+ctaUrl+'"><img class="adventure-item-image" src="'+imageUrl+'" alt="'+cf.headline+'" itemprop="heroImage" itemtype="image"></a><div class="adventure-item-title" itemprop="headline" itemtype="text">'+cf.headline+'</div>';
                     cfElem.innerHTML = offer;
                     cfListBlock.appendChild(cfElem);
                 }
