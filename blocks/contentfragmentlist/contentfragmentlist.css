@@ -24,6 +24,29 @@ li {
     justify-content: normal;
 }
 
+.adventure-item-details {
+    display: flex;
+    justify-content: flex-start;
+    grid-column-gap: 8px;
+    -webkit-column-gap: 8px;
+    column-gap: 8px
+}
+
+.adventure-item-details>div {
+    display: flex;
+    align-items: center
+}
+
+.adventure-item-details>:not(.adventure-item-price) {
+    border: 1px solid #696969;
+    text-transform: capitalize
+}
+
+.adventure-item-details .adventure-item-price {
+    background: #141414;
+    color: #fff
+}
+
 .adventure-item-image {
     width: 100%;
     height: 200px;

@@ -9,7 +9,7 @@ export default function decorate(block) {
     if(window.location.ancestorOrigins.length > 0) {
         console.log("I'm here");
         cfPersistedQuery = cfPersistedQuery.replace("publish", "author");
-        token = "Bearer eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LWF0LTEuY2VyIiwia2lkIjoiaW1zX25hMS1rZXktYXQtMSIsIml0dCI6ImF0In0.eyJpZCI6IjE2NzkyNjQ0Nzk1NTNfNWY4YzZiMTctNjBiNy00ZjRjLWFkZjQtZGE0ZjEzMmFmN2JkX3V3MiIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjbGllbnRfaWQiOiJkZXYtY29uc29sZS1wcm9kIiwidXNlcl9pZCI6IjgyOTExRjU3NjMxQzA0QjEwQTQ5NUZERUA3ZDUyMWY1NzYzMWMwNGIwNDk1ZWNiLmUiLCJzdGF0ZSI6ImM5NEpBVzREemhyNUd6aU55anlvYUNFdiIsImFzIjoiaW1zLW5hMSIsImFhX2lkIjoiMzkzRTVBQjI1OTE5NzE2NzBBNDk1REVGQGFkb2JlLmNvbSIsImN0cCI6MCwiZmciOiJYSkc3Mk9UWFhQTjc0UDYyR09RVjNYUUFXND09PT09PSIsInNpZCI6IjE2NzkyNjA3MTgzNjdfZTZhNGZjZWEtYzk1Ni00MjZhLWE2NzQtOTUxNDBkYzY1OWY1X3VlMSIsInJ0aWQiOiIxNjc5MjY0NDc5NTU0X2E1ZWJkZDdiLTdjNWMtNDExMi05YzUyLTM1YzRiZDljZjhmOF91dzIiLCJtb2kiOiI1NmY1NTQzNiIsInBiYSI6Ik1lZFNlY05vRVYsTG93U2VjIiwicnRlYSI6IjE2ODA0NzQwNzk1NTQiLCJleHBpcmVzX2luIjoiODY0MDAwMDAiLCJzY29wZSI6IkFkb2JlSUQsb3BlbmlkLHJlYWRfb3JnYW5pemF0aW9ucyxhZGRpdGlvbmFsX2luZm8ucHJvamVjdGVkUHJvZHVjdENvbnRleHQiLCJjcmVhdGVkX2F0IjoiMTY3OTI2NDQ3OTU1MyJ9.cPcjCvzQdO2arOmQz0aOX1sZ7w4gH3nkYBiK1G6iuTYMFs289LJyh_VCdfV5-QpF6LaEpPlIDYyQEWfanD6kNZB9hTuLHD3xdAfp5Waid2dDvQxK-KLzk6A6EEfCqxR9WdIUCI1mWWw9Jp9uQ2FIBDUMoLuN1T0oVLHg-0oqH5QZrBA0hZu4EtTIDXz5UfDMEdTGFBECfnYgvfogqq-n5QqEfdzfzsgWAwsKMVtG7YN0X7SJNY06ZM2SDaUHXhziaLxIoCMDivsX4e5wGKU5BjVwrJgrXG-eWoRnCoTk_YqQULyiUMfHElDHae8pPV6E7Urn84HRXtQXyyxfX-ynhA";
+        token = "Bearer eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LWF0LTEuY2VyIiwia2lkIjoiaW1zX25hMS1rZXktYXQtMSIsIml0dCI6ImF0In0.eyJpZCI6IjE2NzkzNjk4NTYzODFfMDdiYzhmMjgtNjBkOC00NTM1LTk1OTMtZmE3OGIyMWI1MTVkX3V3MiIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjbGllbnRfaWQiOiJkZXYtY29uc29sZS1wcm9kIiwidXNlcl9pZCI6IjgyOTExRjU3NjMxQzA0QjEwQTQ5NUZERUA3ZDUyMWY1NzYzMWMwNGIwNDk1ZWNiLmUiLCJzdGF0ZSI6ImhlN1h4RzJaanU1VmdtdmhqQkVaYlc0YSIsImFzIjoiaW1zLW5hMSIsImFhX2lkIjoiMzkzRTVBQjI1OTE5NzE2NzBBNDk1REVGQGFkb2JlLmNvbSIsImN0cCI6MCwiZmciOiJYSktOU09UWFhQTjc0UDYyR09RVjNYUUFXND09PT09PSIsInNpZCI6IjE2NzkyNjA3MTgzNjdfZTZhNGZjZWEtYzk1Ni00MjZhLWE2NzQtOTUxNDBkYzY1OWY1X3VlMSIsInJ0aWQiOiIxNjc5MzY5ODU2MzgyXzI5Yjc2OGI3LWQwNGUtNDQxYS04OGRhLWMzMGU4Y2FlOTk3Ml91dzIiLCJtb2kiOiIyYzlkZmVkZCIsInBiYSI6Ik1lZFNlY05vRVYsTG93U2VjIiwicnRlYSI6IjE2ODA1Nzk0NTYzODIiLCJleHBpcmVzX2luIjoiODY0MDAwMDAiLCJzY29wZSI6IkFkb2JlSUQsb3BlbmlkLHJlYWRfb3JnYW5pemF0aW9ucyxhZGRpdGlvbmFsX2luZm8ucHJvamVjdGVkUHJvZHVjdENvbnRleHQiLCJjcmVhdGVkX2F0IjoiMTY3OTM2OTg1NjM4MSJ9.N8880K76BX21KgjWPjgJ3bSEQqGsZIFL6aBc049dsfFvsc4ZDCXEpggE9qx-jJiZzix2R7m_mSTy86c1_fwuDykjE6lqCXUpVG7NTBssgc_ufoUOImPuSVVZFM-0yVADJ-QnOgPgvqB_1NcqMB76vTgmvQMFKV1gAdJeon9zxppEpUa2_8JzNu7x-OzOXuCA5Fu4W8uLoXC15bEbA-QTB7pGjT2I-tIO3ed1KN-STXwVHhQhqZNFLwUdwN4-cP_U-JcMH6BkmeFV4sOcRsJSn837vtS-jKYo9HZ9pFbhC14h_5lb_Gh2bsqJr0RBJeydvt8fB6fGmZjh2PbTS4K9kQ";
         options = {headers: {
             "authorization": token
         }};
@@ -21,18 +21,15 @@ export default function decorate(block) {
     .then((response) => response.json())
     .then((data) => {
         if(data.data) {
-            const cfList = data.data.offerList.items;
+            const cfList = data.data.adventureList.items;
             const cfListBlock = document.createElement('ul');
             cfListBlock.setAttribute("class", "adventure-items");
             cfList.forEach(cf => {
                 let ctaUrl = '';
                 let imageUrl = ''
-                if(cf.ctaUrl !== null) {
-                    ctaUrl = cf.ctaUrl["_publishUrl"];
-                }
-                if(cf.heroImage !== null) {
-                    imageUrl = cf.heroImage["_publishUrl"];
-                    console.log(cf.heroImage)
+                if(cf.adventurePrimaryImage !== null) {
+                    imageUrl = cf.adventurePrimaryImage["_publishUrl"];
+                    console.log(cf.adventurePrimaryImage)
                 
                     const cfElem = document.createElement('li', {"class": "adventure-item"});
                     cfElem.setAttribute("class", "adventure-item");
@@ -40,7 +37,7 @@ export default function decorate(block) {
                     cfElem.setAttribute("itemid", "urn:aemconnection:" + cf["_path"] + "/jcr:content/data/master");
                     cfElem.setAttribute("itemtype", "reference");
                     cfElem.setAttribute("itemfilter", "cf");
-                    const offer = '<a href="'+ctaUrl+'"><img class="adventure-item-image" src="'+imageUrl+'" alt="'+cf.headline+'" itemprop="heroImage" itemtype="image"></a><div class="adventure-item-title" itemprop="headline" itemtype="text">'+cf.headline+'</div>';
+                    const offer = '<a href="#"><img class="adventure-item-image" src="'+imageUrl+'" alt="'+cf.adventureTitle+'" itemprop="adventurePrimaryImage" itemtype="image"></a><div class="adventure-item-title" itemprop="adventureTitle" itemtype="text">'+cf.adventureTitle+'</div>';
                     cfElem.innerHTML = offer;
                     cfListBlock.appendChild(cfElem);
                 }
